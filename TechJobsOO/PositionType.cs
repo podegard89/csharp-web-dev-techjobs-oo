@@ -18,7 +18,7 @@ namespace TechJobsOO
             Value = value;
         }
 
-        // TODO: Add custom Equals(), GetHashCode(), and ToString() methods.
+        // TODO: Add custom Equals(), GetHashCode(), and ToString() methods. DONE
         public override string ToString()
         {
             return Value;
