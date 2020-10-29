@@ -16,7 +16,7 @@ namespace TechJobsTests
         }
 
         [TestMethod]
-        public void TestJobConstructorSetsAllField()
+        public void TestJobConstructorSetsAllFields()
         {
             Job testJob = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
             Assert.AreEqual($"{testJob.Name} {testJob.EmployerName.Value} {testJob.EmployerLocation.Value} {testJob.JobType.Value} {testJob.JobCoreCompetency.Value}", "Product tester ACME Desert Quality control Persistence");
@@ -45,7 +45,8 @@ namespace TechJobsTests
         public void ToStringReturnsFormattedData()
         {
             Job testJob = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
-            Assert.IsTrue(testJob.ToString().Contains($"ID: {testJob.Id}\n" +
+            Assert.IsTrue(testJob.ToString().Contains(
+                $"ID: {testJob.Id}\n" +
                 $"Name: {testJob.Name}\n" +
                 $"Employer: {testJob.EmployerName.Value}\n" +
                 $"Location: {testJob.EmployerLocation.Value}\n" +
