@@ -21,10 +21,10 @@ namespace TechJobsOO
             Value = value;
         }
 
-        public override int GetHashCode()
-        {
-            return HashCode.Combine(Id);
-        }
+        public abstract override int GetHashCode();
+
+        public abstract override bool Equals(object obj);
+
 
         public override string ToString()
         {
