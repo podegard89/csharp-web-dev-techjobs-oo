@@ -25,9 +25,13 @@ namespace TechJobsOO
         {
             Id = nextId;
             nextId++;
+            jobData.Add("ID", Id.ToString());
+            jobData.Add("Error: ", "OOPS! This job does not seem to exist.");
         }
-        public Job(string name, Employer employerName, Location employerLocation, PositionType jobType, CoreCompetency jobCoreCompetency) : this()
+        public Job(string name, Employer employerName, Location employerLocation, PositionType jobType, CoreCompetency jobCoreCompetency)
         {
+            Id = nextId;
+            nextId++;
             Name = name;
             EmployerName = employerName;
             EmployerLocation = employerLocation;
@@ -69,8 +73,12 @@ namespace TechJobsOO
                     outputString += $"{dataPoint.Key}: {dataPoint.Value}\n";
                 }
             }
-            return $"\n{outputString}";
-        }
 
+            //if ()
+            //{
+            //    outputString = "OOPS! This job does not seem to exist.";
+            //}
+            return $"\n{outputString}"; 
+        }
     }
 }

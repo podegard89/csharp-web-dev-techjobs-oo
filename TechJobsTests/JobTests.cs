@@ -61,5 +61,12 @@ namespace TechJobsTests
             Job testJob = new Job("Ice cream tester", new Employer(""), new Location("Home"), new PositionType("UX"), new CoreCompetency("Tasting ability"));
             Assert.IsTrue(testJob.ToString().Contains("Employer: Data not available"));
         }
+
+        [TestMethod]
+        public void IfJobOnlyHasIdToStringReturnsSpecialString()
+        {
+            Job emptyTestJob = new Job();
+            Assert.IsTrue(emptyTestJob.ToString().Contains("OOPS! This job does not seem to exist."));
+        }
     }
 }
